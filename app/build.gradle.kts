@@ -1,6 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
-    id("org.jetbrains.kotlin.android")
+    alias(libs.plugins.kotlin.android)
 }
 
 android {
@@ -33,8 +33,8 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
-    viewBinding {
-        enable = true
+    buildFeatures {
+        viewBinding = true
     }
 }
 
@@ -44,8 +44,12 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    
+    // Retrofit
     implementation(libs.retrofit)
-    implementation(libs.retrofit-converter-gson)
+    implementation(libs.retrofit.converter.gson)
+    
+    // Fragment KTX
     implementation(libs.androidx.fragment.ktx)
 
     testImplementation(libs.junit)
