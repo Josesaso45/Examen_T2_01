@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.example.examen_t2_01"
-    compileSdk = 36
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.examen_t2_01"
         minSdk = 30
-        targetSdk = 36
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
